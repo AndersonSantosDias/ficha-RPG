@@ -28,6 +28,7 @@ function calcular(){
     }
     if(raca.value == "Vagariano"){
         dados(base[3], base[4], base[5])
+        defesa += Number(constituicao.value)/5
     }
     if(raca.value == "Naniki"){
         dados(base[6], base[7], base[8])
@@ -40,19 +41,23 @@ function calcular(){
     }
     if(raca.value == "Hachuruijin"){
         dados(base[15], base[16], base[17])
+        defesa += Number(constituicao.value)/2
     }
     if(raca.value == "Kawatonarujin"){
         dados(base[18], base[19], base[20])
     }
     if(raca.value == "Nacaridiano"){
         dados(base[21], base[22], base[23])
-        dfisarm = dfisarm + ((Number(forca.value)/2 + Number(destreza.value)/2) * 0.2)
+        dfisarm += (Number(forca.value)/2 + Number(destreza.value)/2) * 0.2
     }
     if(raca.value == "Tsukakuma"){
         dados(base[24], base[25], base[26])
+        PV += PM * 0.05
+        dfis += Number(inteligencia.value) * 0.2
     }
     if(raca.value == "Anão"){
         dados(base[27], base[28], base[29])
+        PV += Number(constituicao.value) * 5
     }
     
     var conteudoDiv = document.getElementById('res');
@@ -87,7 +92,7 @@ function calcular(){
             PM = e * Number(niv.value) + Number(magia.value) * 20
         }
         if (Number(primaria.value) == 2){
-            PV = (p * 1.5) * Number(niv.value) + Number(constituicao.value) * 15
+            PV = p * Number(niv.value) + Number(constituicao.value) * 15
             defesa = Number(constituicao.value)/5
             dfis = Number(forca.value)
         } else{
