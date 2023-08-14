@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Ficha</title>
+</head>
+<body>
+    <main>
+        <section class="raca">
+            <p class="titulo">Ficha: </p>
+            <p>Raça</p>
+            <select name="raça" id="racas">
+                <option value="Humano"> Humano </option>
+                <option value="Vagariano"> Vagariano </option>
+                <option value="Naniki"> Naniki </option>
+                <option value="Tsukakuma"> Tsukakuma </option>
+                <option value="Nacaridiano"> Nacaridiano </option>
+                <option value="Anão"> Anão </option>
+                <option value="Nekokaijin"> Nekokaijin </option>
+                <option value="Koinujin"> Koinujin </option>
+                <option value="Hachuruijin"> Hachuruijin</option>
+                <option value="Kawatonarujin"> Kawatonarujin </option>
+            </select>
+
+            <p>Nivel</p>
+            <input type="number" id="niv">
+        </section>
+        <section class="aptidao">
+            <p class="titulo">Apitidões</p>
+            <p>Primaria</p>
+            <select name="primaria" id="primaria">
+                <option value="0"> --Selecionar-- </option>
+                <option value="1"> Magia </option>
+                <option value="2"> Corpo </option>
+                <option value="3"> Arma </option>
+                <option value="4"> Espirito </option>
+            </select>
+            <p>Secunsaria</p>
+            <select name="secundaria" id="secundaria">
+                <option value="0"> --Selecionar-- </option>
+                <option value="1"> Magia </option>
+                <option value="2"> Corpo </option>
+                <option value="3"> Arma </option>
+                <option value="4"> Espirito </option>
+            </select>
+            <p>Tercearia</p>
+            <select name="tercearia" id="tercearia">
+                <option value="0"> --Selecionar-- </option>
+                <option value="1"> Magia </option>
+                <option value="2"> Corpo </option>
+                <option value="3"> Arma </option>
+                <option value="4"> Espirito </option>
+            </select>
+            <p>Ultima</p>
+            <select name="ultima" id="ultima">
+                <option value="0"> --Selecionar-- </option>
+                <option value="1"> Magia </option>
+                <option value="2"> Corpo </option>
+                <option value="3"> Arma </option>
+                <option value="4"> Espirito </option>
+            </select>
+        </section>
+        <section class="atributos">
+            <p class="titulo">Atributos</p>
+            <label for="for">Força: </label>
+            <input type="number" id="for">
+            <label for="con">Constituição: </label>
+            <input type="number" id="con">
+            <label for="vel">Velocidade: </label>
+            <input type="number" id="vel">
+            <label for="des">Destreza: </label>
+            <input type="number" id="des">
+            <label for="mag">Magia: </label>
+            <input type="number" id="mag">
+            <label for="int">Inteligencia: </label>
+            <input type="number" id="int">
+            <label for="car">Carisma: </label>
+            <input type="number" id="car">
+            <button class="calc" onclick="calcular()"> Calcular ficha </button>
+        </section>
+        <section id="res">
+            <h1>Seus dados:</h1>
+        </section>
+    </main>
+</body>
+</html>

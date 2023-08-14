@@ -1,0 +1,33 @@
+*{ margin: 0px; padding: 0px; box-sizing: border-box; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+
+body{background-color: blue;}
+
+main{ display: flex; flex-direction: column; width: 300px; height: 900px; margin: auto; background-color: white; border-radius: 20px; padding: 20px; margin-top: 20px; background: black url(imagens/fundo-ficha.jpg) 100%; background-size: cover; box-shadow: 3px 3px 5px black; transition: width 1s, heigth 1s;}
+.titulo{font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px; font-weight: bold;}
+
+.raca{display: flex; flex-direction: column; margin-bottom: 10px; width: 150px;}
+.raca .titulo{flex-basis: 100%;}
+.raca p{flex-basis: 35%; margin-top: 5px;}
+.raca select input{flex-basis: 70%;}
+
+.aptidao{display: flex; flex-direction: column; margin-bottom: 10px; width: 150px;}
+.aptidao  select{flex-basis: 30%;}
+.aptidao p{margin-top: 5px;}
+
+.atributos{display: flex; flex-direction: row; flex-wrap: wrap; align-content: space-between; flex-basis: 100%;}
+.atributos p{flex-basis: 100%;}
+.atributos label {flex-basis: 35%;}
+
+
+input{border-radius: 5px;}
+select{border-radius: 5px;}
+
+.calc{padding: 2px; border-radius: 5px;}
+
+#res{display: flex; flex-direction: column; width: 150px;; height: 750px;}
+#res p{font-size: 1.2em;}
+
+@media (min-width: 700px) {
+    main{display: flex; flex-direction: column; flex-wrap: wrap; width: 700px; height: 400px; align-content: space-between;}
+    .atributos{display: flex; flex-direction: row; width: 200px;}
+}
