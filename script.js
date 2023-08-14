@@ -666,30 +666,10 @@ function calcular(){
         if (Number(ultima.value) == 4){
             desp = Number(inteligencia.value) * 0.5
         }
-
         deslocamento = 5 + Number(velocidade.value)/20
         ações = 3 + Number(destreza.value)/20
-
     }
-
-    /*let conteudoDiv = document.getElementById('res');
-    let novoParagrafo = document.createElement('p');
-    novoParagrafo.textContent = `
-    Raça: ${raca.value}
-    PV: ${PV}
-    Energia: ${PM}
-    Deslocamento: ${deslocamento.toFixed(1)}
-    Ações: ${ações.toFixed(1)}
-    Defesa: ${defesa.toFixed(1)}
-    Dano fisico corporal: ${dfis}
-    Dano fisico com arma: ${dfisarm.toFixed(1)}
-    Dano magico: ${dmag}
-    Dano espiritual: ${desp}`;
-    conteudoDiv.appendChild(novoParagrafo);*/
-    
     var conteudoDiv = document.getElementById('res');
-
-
     var informacoes = `
     Raça: ${raca.value} <br>
     PV: ${PV} <br>
@@ -701,15 +681,11 @@ function calcular(){
     Dano fisico com arma: ${dfisarm.toFixed(1)} <br>
     Dano magico: ${dmag} <br>
     Dano espiritual: ${desp} <br>`;
-
     var paragrafoExistente = document.querySelector('#res p');
     if (paragrafoExistente) {
         paragrafoExistente.remove();
     }
-
     var novoParagrafo = document.createElement('p');
     novoParagrafo.innerHTML = informacoes;
-
     conteudoDiv.appendChild(novoParagrafo);
-
 }
