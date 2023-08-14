@@ -24,10 +24,10 @@ select{border-radius: 5px;}
 
 .calc{padding: 2px; border-radius: 5px;}
 
-#res{display: flex; flex-direction: column; width: 150px; height: 750px;}
+#res{display: flex; flex-direction: column; width: 200px; height: 750px;}
 
 @media (min-width: 700px) {
     main{display: flex; flex-direction: column; flex-wrap: wrap; width: 700px; height: 400px; align-content: space-between;}
     .atributos{display: flex; flex-direction: row; width: 200px;}
-    #res p{font-size: 1.2em;}
+    #res p{font-size: 1.15em;}
 }
