@@ -23,6 +23,10 @@ function calcular(){
     let ultima = document.getElementById('ultima')
     let base = [30, 30, 5, 45, 20, 4, 20, 30, 7, 20, 25, 8, 30, 35, 6, 40, 25, 4, 25, 35, 5, 40, 15, 6, 20, 40, 5, 45, 20, 4]
 
+    /* manipulação dos selects */
+    
+
+    /* Calculo das raças */
     if(raca.value == "Humano"){
         dados(base[0], base[1], base[2])
     }
@@ -59,7 +63,7 @@ function calcular(){
         dados(base[27], base[28], base[29])
         PV += Number(constituicao.value) * 5
     }
-    
+    /* Alteração no HTML */
     var conteudoDiv = document.getElementById('res');
     var informacoes = `
     Raça: ${raca.value} <br>
@@ -82,6 +86,8 @@ function calcular(){
     novoParagrafo.innerHTML = informacoes;
     conteudoDiv.appendChild(novoParagrafo);
 
+
+    /* funções extras */
     function dados(p, e, d){
         var base = [30, 30, 5, 45, 20, 4, 20, 30, 7, 20, 25, 8, 30, 35, 6, 40, 25, 4, 25, 35, 5, 40, 15, 6, 20, 40, 5, 45, 20, 4]
     
