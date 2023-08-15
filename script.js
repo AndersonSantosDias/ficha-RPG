@@ -149,7 +149,6 @@ function calcular(){
         ações = 3 + Number(destreza.value)/20
     }
 }
-
 function opção1(){
     let primeira = document.getElementById('primaria')
     let terceira = document.getElementById('tercearia')
@@ -189,7 +188,6 @@ function opção1(){
         quarta[v].style.display = 'none'
     }
 }
-
 function opção2(){
     var secundaria = document.getElementById('secundaria')
     let terceira = document.getElementById('tercearia')
@@ -224,7 +222,6 @@ function opção2(){
         quarta[v].style.display = 'none'
     }
 }
-
 function opção3(){
     let terceira = document.getElementById('tercearia')
     let quarta = document.getElementById('ultima')
