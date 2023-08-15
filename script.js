@@ -23,9 +23,6 @@ function calcular(){
     let ultima = document.getElementById('ultima')
     let base = [30, 30, 5, 45, 20, 4, 20, 30, 7, 20, 25, 8, 30, 35, 6, 40, 25, 4, 25, 35, 5, 40, 15, 6, 20, 40, 5, 45, 20, 4]
 
-    /* manipulação dos selects */
-    
-
     /* Calculo das raças */
     if(raca.value == "Humano"){
         dados(base[0], base[1], base[2])
@@ -63,6 +60,7 @@ function calcular(){
         dados(base[27], base[28], base[29])
         PV += Number(constituicao.value) * 5
     }
+
     /* Alteração no HTML */
     var conteudoDiv = document.getElementById('res');
     var informacoes = `
@@ -78,14 +76,10 @@ function calcular(){
     Dano espiritual: ${desp.toFixed(1)} <br>`;
 
     var paragrafoExistente = document.querySelector('#res p');
-    if (paragrafoExistente) {
-        paragrafoExistente.remove();
-    }
-
+    if (paragrafoExistente) {paragrafoExistente.remove();}
     var novoParagrafo = document.createElement('p');
     novoParagrafo.innerHTML = informacoes;
     conteudoDiv.appendChild(novoParagrafo);
-
 
     /* funções extras */
     function dados(p, e, d){
@@ -153,5 +147,109 @@ function calcular(){
     
         deslocamento = d + Number(velocidade.value)/20
         ações = 3 + Number(destreza.value)/20
+    }
+}
+
+function opção1(){
+    let primeira = document.getElementById('primaria')
+    let terceira = document.getElementById('tercearia')
+    let quarta = document.getElementById('ultima')
+
+    if (primaria.value == 1){
+        none1(primeira.value)
+    } else{
+        secundaria[1].style.display = 'inline-block'
+        terceira[1].style.display = 'inline-block'
+        quarta[1].style.display = 'inline-block'
+    }
+    if (primaria.value == 2){
+        none1(primeira.value)
+    } else{
+        secundaria[2].style.display = 'inline-block'
+        terceira[2].style.display = 'inline-block'
+        quarta[2].style.display = 'inline-block'
+    }
+    if (primaria.value == 3){
+        none1(primeira.value)
+    } else{
+        secundaria[3].style.display = 'inline-block'
+        terceira[3].style.display = 'inline-block'
+        quarta[3].style.display = 'inline-block'
+    }
+    if (primaria.value == 4){
+        none1(primeira.value)
+    } else{
+        secundaria[4].style.display = 'inline-block'
+        terceira[4].style.display = 'inline-block'
+        quarta[4].style.display = 'inline-block'
+    }
+    function none1(v){
+        secundaria[v].style.display = 'none'
+        terceira[v].style.display = 'none'
+        quarta[v].style.display = 'none'
+    }
+}
+
+function opção2(){
+    var secundaria = document.getElementById('secundaria')
+    let terceira = document.getElementById('tercearia')
+    let quarta = document.getElementById('ultima')
+
+    if (secundaria.value == 1){
+        none2(secundaria.value)
+    } else{
+        terceira[1].style.display = secundaria[1].style.display
+        quarta[1].style.display = secundaria[1].style.display
+    }
+    if (secundaria.value == 2){
+        none2(secundaria.value)
+    } else{
+        terceira[2].style.display = secundaria[2].style.display
+        quarta[2].style.display = secundaria[2].style.display
+    }
+    if (secundaria.value == 3){
+        none2(secundaria.value)
+    } else{
+        terceira[3].style.display = secundaria[3].style.display
+        quarta[3].style.display = secundaria[3].style.display
+    }
+    if (secundaria.value == 4){
+        none2(secundaria.value)
+    } else{
+        terceira[4].style.display = secundaria[4].style.display
+        quarta[4].style.display = secundaria[4].style.display
+    }
+    function none2(v){
+        terceira[v].style.display = 'none'
+        quarta[v].style.display = 'none'
+    }
+}
+
+function opção3(){
+    let terceira = document.getElementById('tercearia')
+    let quarta = document.getElementById('ultima')
+
+    if (terceira.value == 1){
+        none2(terceira.value)
+    } else{
+        quarta[1].style.display = terceira[1].style.display
+    }
+    if (terceira.value == 2){
+        none2(terceira.value)
+    } else{
+        quarta[2].style.display = terceira[2].style.display
+    }
+    if (terceira.value == 3){
+        none2(terceira.value)
+    } else{
+        quarta[3].style.display = terceira[3].style.display
+    }
+    if (terceira.value == 4){
+        none2(terceira.value)
+    } else{
+        quarta[4].style.display = terceira[4].style.display
+    }
+    function none2(v){
+        quarta[v].style.display = 'none'
     }
 }
