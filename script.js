@@ -39,14 +39,17 @@ function calcular(){
         if (Number(primaria.value) == 2){PV = p * Number(niv.value) + Number(constituicao.value) * 15; defesa = Number(constituicao.value)/5; dfis = Number(forca.value)} else{PV = p * Number(niv.value) + Number(constituicao.value) * 10; defesa = Number(constituicao.value)/10}
         if (Number(primaria.value) == 3){dfisarm = Number(forca.value)/2 + Number(destreza.value)/2}
         if (Number(primaria.value) == 4){desp = Number(inteligencia.value)}
+
         if (Number(secundaria.value) == 1){dmag = Number(inteligencia.value) * 0.8}
         if (Number(secundaria.value) == 2){dfis = Number(forca.value) * 0.8}
         if (Number(secundaria.value) == 3){dfisarm = (Number(forca.value)/2 + Number(destreza.value)/2) * 0.8}
         if (Number(secundaria.value) == 4){desp = Number(inteligencia.value) * 0.8}
+
         if (Number(tercearia.value) == 1){dmag = Number(inteligencia.value) * 0.5}
         if (Number(tercearia.value) == 2){dfis = Number(forca.value) * 0.5}
         if (Number(tercearia.value) == 3){dfisarm = (Number(forca.value)/2 + Number(destreza.value)/2) * 0.5}
         if (Number(tercearia.value) == 4){desp = Number(inteligencia.value) * 0.5}
+
         if (Number(ultima.value) == 1){dmag = Number(inteligencia.value) * 0.4}
         if (Number(ultima.value) == 2){dfis = Number(forca.value) * 0.4}
         if (Number(ultima.value) == 3){dfisarm = (Number(forca.value)/2 + Number(destreza.value)/2) * 0.4}
@@ -78,44 +81,36 @@ function opção1(){
     let secundaria = document.getElementById('secundaria')
     let terceira = document.getElementById('tercearia')
     let quarta = document.getElementById('ultima')
+
     if (primaria.value == 1){none1(primeira.value)} else{inLine1(1)}
     if (primaria.value == 2){none1(primeira.value)} else{inLine1(2)}
     if (primaria.value == 3){none1(primeira.value)} else{inLine1(3)}
     if (primaria.value == 4){none1(primeira.value)} else{inLine1(4)}
-    function none1(v){
-        secundaria[v].style.display = 'none'
-        terceira[v].style.display = 'none'
-        quarta[v].style.display = 'none'
-    }
-    function inLine1(a){
-        secundaria[a].style.display = 'inline-block'
-        terceira[a].style.display = 'inline-block'
-        quarta[a].style.display = 'inline-block'
-    }
+
+    function none1(v){secundaria[v].style.display = 'none'; terceira[v].style.display = 'none'; quarta[v].style.display = 'none'}
+    function inLine1(a){secundaria[a].style.display = 'inline-block'; terceira[a].style.display = 'inline-block'; quarta[a].style.display = 'inline-block'}
 }
 function opção2(){
     let secundaria = document.getElementById('secundaria')
     let terceira = document.getElementById('tercearia')
     let quarta = document.getElementById('ultima')
+
     if (secundaria.value == 1){none2(secundaria.value)} else{inLine2(1)}
     if (secundaria.value == 2){none2(secundaria.value)} else{inLine2(2)}
     if (secundaria.value == 3){none2(secundaria.value)} else{inLine2(3)}
     if (secundaria.value == 4){none2(secundaria.value)} else{inLine2(4)}
-    function none2(v){
-        terceira[v].style.display = 'none'
-        quarta[v].style.display = 'none'
-    }
-    function inLine2(a){
-        terceira[a].style.display = secundaria[a].style.display
-        quarta[a].style.display = secundaria[a].style.display
-    }
+
+    function none2(v){terceira[v].style.display = 'none'; quarta[v].style.display = 'none'}
+    function inLine2(a){terceira[a].style.display = secundaria[a].style.display; quarta[a].style.display = secundaria[a].style.display}
 }
 function opção3(){
     let terceira = document.getElementById('tercearia')
     let quarta = document.getElementById('ultima')
+
     if (terceira.value == 1){none3(terceira.value)} else{quarta[1].style.display = terceira[1].style.display}
     if (terceira.value == 2){none3(terceira.value)} else{quarta[2].style.display = terceira[2].style.display}
     if (terceira.value == 3){none3(terceira.value)} else{quarta[3].style.display = terceira[3].style.display}
     if (terceira.value == 4){none3(terceira.value)} else{quarta[4].style.display = terceira[4].style.display}
+    
     function none3(v){quarta[v].style.display = 'none'}
 }
