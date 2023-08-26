@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <style>
+        *{margin: 0px; padding: 0px; box-sizing: border-box; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+        .tamanho{
+            height: 900px;
+        }
+        /*main{ transition: width 1s, heigth 1s;}*/
+
+    </style>
     <title>Ficha</title>
 </head>
-<body>
-    <main>
-        <section class="raca">
-            <p class="titulo">Ficha: </p>
-            <p>Raça</p>
-            <select name="raça" id="racas">
+<body class="bg-sky-400 text-white font-bold">
+    <main class="bg-blue-500 flex flex-col w-96 m-auto rounded-2xl p-5 mt-5 mb-5 content-between md:flex-nowrap md:w-4/5 md:content-between">
+        <section id="Ficha" class="flex flex-row flex-wrap content-start basis-full md:justify-center" >
+            <p class="text-2xl font-bold basis-full text-center">info base: </p>
+            <p class="basis-2/5 md:basis-0 md:m-1 md:text-xl">Raça: </p>
+            <select class="h-8 text-xs rounded-xl text-blue-700 hover:border-blue-800 border-2 border-solid md:m-1" name="raça" id="racas">
                 <option value="Humano"> Humano </option>
                 <option value="Vagariano"> Vagariano </option>
                 <option value="Naniki"> Naniki </option>
@@ -24,66 +30,103 @@
                 <option value="Hachuruijin"> Hachuruijin</option>
                 <option value="Kawatonarujin"> Kawatonarujin </option>
             </select>
+            <p class="basis-2/5 mt-2 md:basis-0 md:m-1 md:text-xl">Nivel:</p>
+            <input class="h-5 mt-2 text-blue-700 hover:border-blue-800 border-2 border-solid md:m-1 h-8" type="number" id="niv">
+        </section>
+        <section id="Apitidões" class="flex flex-row flex-wrap content-between basis-full mt-5 mb-2.5 md:h-80 md:justify-between md:items-baseline md:basis-full" >
+            <p class="text-2xl font-bold basis-full text-center">Apitidões:</p>
 
-            <p>Nivel</p>
-            <input type="number" id="niv">
+            <span class="basis-full md:basis-0">
+                <p class="mt-2 basis-2/5 md:basis-0">Primaria</p>
+                <select class="h-8 text-xs rounded-xl text-blue-700 hover:border-blue-800 border-2 border-solid md:w-32" id="primaria" onchange="opção1()">
+                    <option value="0"> --Selecionar-- </option>
+                    <option value="1"> Magia </option>
+                    <option value="2"> Corpo </option>
+                    <option value="3"> Arma </option>
+                    <option value="4"> Espirito </option>
+                </select>
+            </span>
+
+            <span class="basis-full md:basis-0">
+                <p class="mt-2 basis-2/5 md:basis-0">Secunsaria</p>
+                <select class="h-8 text-xs rounded-xl mt-2 text-blue-700 hover:border-blue-800 border-2 border-solid" id="secundaria" onchange="opção2()">
+                    <option value="0"> --Selecionar-- </option>
+                    <option value="1"> Magia </option>
+                    <option value="2"> Corpo </option>
+                    <option value="3"> Arma </option>
+                    <option value="4"> Espirito </option>
+                </select>
+            </span>
+
+            <span class="basis-full md:basis-0">
+                <p class="mt-2 basis-2/5 md:basis-0">Tercearia</p>
+                <select class="h-8 text-xs rounded-xl mt-2 text-blue-700 hover:border-blue-800 border-2 border-solid" id="tercearia" onchange="opção3()">
+                    <option value="0"> --Selecionar-- </option>
+                    <option value="1"> Magia </option>
+                    <option value="2"> Corpo </option>
+                    <option value="3"> Arma </option>
+                    <option value="4"> Espirito </option>
+                </select>
+            </span>
+
+            <span class="basis-full md:basis-0">
+                <p class="mt-2 basis-2/5 md:basis-0">Ultima</p>
+                <select class="h-8 text-xs rounded-xl mt-2 text-blue-700 hover:border-blue-800 border-2 border-solid" id="ultima">
+                    <option value="0"> --Selecionar-- </option>
+                    <option value="1"> Magia </option>
+                    <option value="2"> Corpo </option>
+                    <option value="3"> Arma </option>
+                    <option value="4"> Espirito </option>
+                </select>
+            </span>
         </section>
-        <section class="aptidao">
-            <p class="titulo">Apitidões</p>
-            <p>Primaria</p>
-            <select id="primaria" onchange="opção1()">
-                <option value="0"> --Selecionar-- </option>
-                <option value="1"> Magia </option>
-                <option value="2"> Corpo </option>
-                <option value="3"> Arma </option>
-                <option value="4"> Espirito </option>
-            </select>
-            <p>Secunsaria</p>
-            <select id="secundaria" onchange="opção2()">
-                <option value="0"> --Selecionar-- </option>
-                <option value="1"> Magia </option>
-                <option value="2"> Corpo </option>
-                <option value="3"> Arma </option>
-                <option value="4"> Espirito </option>
-            </select>
-            <p>Tercearia</p>
-            <select id="tercearia" onchange="opção3()">
-                <option value="0"> --Selecionar-- </option>
-                <option value="1"> Magia </option>
-                <option value="2"> Corpo </option>
-                <option value="3"> Arma </option>
-                <option value="4"> Espirito </option>
-            </select>
-            <p>Ultima</p>
-            <select id="ultima">
-                <option value="0"> --Selecionar-- </option>
-                <option value="1"> Magia </option>
-                <option value="2"> Corpo </option>
-                <option value="3"> Arma </option>
-                <option value="4"> Espirito </option>
-            </select>
-        </section>
-        <section class="atributos">
-            <p class="titulo">Atributos</p>
-            <label for="for">Força: </label>
-            <input type="number" id="for">
-            <label for="con">Constituição: </label>
-            <input type="number" id="con">
-            <label for="vel">Velocidade: </label>
-            <input type="number" id="vel">
-            <label for="des">Destreza: </label>
-            <input type="number" id="des">
-            <label for="mag">Magia: </label>
-            <input type="number" id="mag">
-            <label for="int">Inteligencia: </label>
-            <input type="number" id="int">
-            <label for="car">Carisma: </label>
-            <input type="number" id="car">
-            <button class="calc" onclick="calcular()"> Calcular ficha </button>
-        </section>
-        <section id="res">
-            <h1>Seus dados:</h1>
-        </section>
+        <article class="flex flex-col flex-wrap md:h-80 md:content-arrownd">
+            <section id="Atributos" class="flex flex-row flex-wrap content-between basis-full mt-5 md:w-2/5 md:justify-around">
+                <p class="basis-full text-2xl font-bold text-center">Atributos:</p>
+
+                <label class="basis-1/3" for="for">Força:</label>
+                <input class="h-5 text-blue-700 hover:border-blue-800 border-2 border-solid md:w-32" type="number" id="for">
+
+                <label class="basis-1/3" for="con">Constituição: </label>
+                <input class="h-5 text-blue-700 hover:border-blue-800 border-2 border-solid md:w-32" type="number" id="con">
+
+                <label class="basis-1/3" for="vel">Velocidade: </label>
+                <input class="h-5 text-blue-700 hover:border-blue-800 border-2 border-solid md:w-32" type="number" id="vel">
+
+                <label class="basis-1/3" for="des">Destreza: </label>
+                <input class="h-5 text-blue-700 hover:border-blue-800 border-2 border-solid md:w-32" type="number" id="des">
+
+                <label class="basis-1/3" for="mag">Magia: </label>
+                <input class="h-5 text-blue-700 hover:border-blue-800 border-2 border-solid md:w-32" type="number" id="mag">
+
+                <label class="basis-1/3" for="int">Inteligencia: </label>
+                <input class="h-5 text-blue-700 hover:border-blue-800 border-2 border-solid md:w-32" type="number" id="int">
+
+                <label class="basis-1/3" for="car">Carisma: </label>
+                <input class="h-5 text-blue-700 hover:border-blue-800 border-2 border-solid md:w-32" type="number" id="car">
+
+                <button class="bg-white p-1 rounded-xl basis-full text-blue-700 hover:border-blue-800 border-2 border-solid" onclick="calcular()"> Calcular ficha </button>
+
+            </section>
+            <section id="res" class="flex flex-col mt-5 basis-full md:w-2/5">
+                <h3 class="text-2xl text-center">Seus dados:<h3>
+                    <p>
+                        Raça: <br>
+                        PV: <br>
+                        Energia: <br>
+                        Deslocamento: <br>
+                        Ações: <br>
+                        Defesa: <br>
+                        Dano fisico: <br>
+                        Dano armado: <br>
+                        Dano magico: <br>
+                        Dano espiritual: <br>
+                    </p>
+            </section>
+        </article>
     </main>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="script.js"></script>
 </body>
 </html>
